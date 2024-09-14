@@ -1,0 +1,14 @@
+.barang{
+    width: 150px;
+    height: 200px;
+    border: 1px solid grey;
+}
+
+.deskripsi{
+    position: relative;
+}
+
+.title{
+    position: absolute ;
+    top: 0;
+}

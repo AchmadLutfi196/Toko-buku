@@ -1,0 +1,37 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.popular-books, .categories {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.popular-books h2, .categories h2 {
+    margin-bottom: 30px;
+}
+
+.book-list, .category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book, .category {
+    background: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book button a{
+    color: white;
+}

@@ -1,0 +1,41 @@
+.category {
+  margin-right: 10px;
+}
+.category select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.icon {
+  margin-left: 10px;
+  height: 24px;
+  width: 24px;
+}
+.main-content img {
+  width: 100%;
+  height: auto;
+}
+.contact-form {
+  margin: 20px;
+}
+.divider {
+  border-left: 1px solid #ccc;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.contact-section {
+  position: relative;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+.contact-info img {
+  margin: 0 10px;
+}
+.contact-info div {
+  display: flex;
+  flex-direction: column;
+}

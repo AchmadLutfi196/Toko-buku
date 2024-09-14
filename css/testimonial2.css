@@ -1,0 +1,23 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* footer */
+.footer{
+    margin: 1rem 4rem 1rem 4rem;
+}
+
+.list-inline-item{
+    margin-top: 10px;
+}
+
+.footer-custom {
+    background-color: #F4EFFD;
+    border-radius: 100px;
+}
+.footer h5{
+    margin-top: 10px
+}

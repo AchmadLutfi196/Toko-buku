@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Barang</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Daftar Barang</h1>
+        <div class="row">
+            <div class="col-md-3 item">
+                <img src="item1.jpg" alt="Item 1">
+                <h4>Barang 1</h4>
+                <p>Harga: $50.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Barang 1', 50)">Tambah ke Keranjang</button>
+            </div>
+            <div class="col-md-3 item">
+                <img src="item2.jpg" alt="Item 2">
+                <h4>Barang 2</h4>
+                <p>Harga: $30.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Barang 2', 30)">Tambah ke Keranjang</button>
+            </div>
+            <div class="col-md-3 item">
+                <img src="item3.jpg" alt="Item 3">
+                <h4>Barang 3</h4>
+                <p>Harga: $20.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Barang 3', 20)">Tambah ke Keranjang</button>
+            </div>
+            <div class="col-md-3 item">
+                <img src="item4.jpg" alt="Item 4">
+                <h4>Barang 4</h4>
+                <p>Harga: $40.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Barang 4', 40)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <a href="cart.html" class="btn btn-success">Lihat Keranjang</a>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(item, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ item: item, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item + " telah ditambahkan ke keranjang!");
+        }
+    </script>
+</body>
+</html>

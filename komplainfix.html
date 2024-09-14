@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylehub.css">
+    <link rel="stylesheet" href="komplain.css">
+    <link rel="stylesheet" href="/Project/headerfooter.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom" id="Home">
+        <a class="navbar-brand font-weight-bold" href="/Project/Home/home.html">BukuKu.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Fiksi</a>
+                    <a class="dropdown-item" href="#">Non Fiksi</a>
+                    <a class="dropdown-item" href="#">Sastra</a>
+                    <a class="dropdown-item" href="#">Anak-anak</a>
+                    <a class="dropdown-item" href="#">Agama</a>
+                    <a class="dropdown-item" href="#">Hobi</a>
+                    <a class="dropdown-item" href="#">Seni dan Hiburan</a>
+                    <a class="dropdown-item" href="#">Pendidikan dan Referensi</a>
+                    <a class="dropdown-item" href="#">Teknologi dan Komputer</a>
+                    <a class="dropdown-item" href="#">Hukum dan Politik</a>
+                </li>
+                <li class="nav-item">
+                    <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Cari Judul Buku" aria-label="Search">
+                </li>
+                <li class="nav-item">
+                    <a href="keranjang.html"><i class="bi bi-cart "></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html"><i class="bi bi-person-circle "></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="btn btn-outline-primary my-2 my-sm-0 rounded-pill btn-custom">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back main-content">
+        <a href="/Project/Home/home.html">
+            <button class="btn btn-secondary">❮</button>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="">
+            <H1>Pengembalian</H1>
+            <form>
+                <div>
+                    <div class="mb-5">
+                        <label for="name" class="form-label">Barang</label>
+                        <div>
+                            <p class="deskripsi"><img src="/Project/Gambar/chat.webp" class="barang" alt="produk">
+                                <span class="title ml-3">| DPW anjay mabar slebew</span></p>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label for="message" class="form-label">Alasan</label>
+                        <textarea class="form-control" id="message" rows="4"></textarea>
+                    </div>
+                    <div class="mb-5">
+                        <label for="subject" class="form-label">Alamat Email</label>
+                        <input type="email" class="form-control" id="subject">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

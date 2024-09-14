@@ -1,0 +1,9 @@
+.book{
+    height: 40px;
+    width: 20px;
+}
+
+.promo-down{
+    text-decoration: line-through;
+    font-size: 12;
+}

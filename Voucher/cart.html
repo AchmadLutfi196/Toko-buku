@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Keranjang Belanja</h1>
+        <div id="cartItems"></div>
+        <div class="apply-voucher my-4">
+            <input type="text" id="voucherCode" placeholder="Enter voucher code" class="form-control">
+            <button class="btn btn-primary my-2" onclick="applyVoucher()">Apply Voucher</button>
+        </div>
+        <div class="total-price">
+            <h5>Total Price: $<span id="totalPrice">0.00</span></h5>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', loadCart);
+
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItems = document.getElementById('cartItems');
+            let totalPrice = 0;
+
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <h4>${item.item}</h4>
+                        <p>Harga: $${item.price.toFixed(2)}</p>
+                        <button class="btn btn-danger" onclick="removeFromCart(${index})">Hapus</button>
+                    </div>
+                `;
+                totalPrice += item.price;
+            });
+
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function applyVoucher() {
+            const voucherCode = document.getElementById("voucherCode").value;
+            const totalPriceElement = document.getElementById("totalPrice");
+            let totalPrice = parseFloat(totalPriceElement.textContent);
+
+            const vouchers = {
+                "DISCOUNT5": 0.05,
+                "DISCOUNT10": 0.10,
+                "DISCOUNT20": 0.20,
+                "DISCOUNT30": 0.30,
+                "DISCOUNT40": 0.40,
+                "DISCOUNT45": 0.45
+            };
+
+            if (vouchers[voucherCode.toUpperCase()]) {
+                const discount = vouchers[voucherCode.toUpperCase()];
+                const discountedPrice = totalPrice - (totalPrice * discount);
+                totalPriceElement.textContent = discountedPrice.toFixed(2);
+                alert("Voucher applied successfully!");
+            } else {
+                alert("Invalid voucher code. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
